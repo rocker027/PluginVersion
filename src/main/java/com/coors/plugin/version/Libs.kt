@@ -8,7 +8,7 @@ object Libs {
     private const val verColiCompose = "2.1.0"
     private const val verViewModelCompose = "2.4.1"
     private const val verActivityCompose = "1.4.0"
-    private const val verComposeUi: String = "1.1.1"
+    const val verComposeUi: String = "1.1.1"
     private const val verArchCore = "2.1.0"
     private const val verAndroidLegacy = "1.0.0"
     private const val verNavigation = "2.4.1"
@@ -23,8 +23,7 @@ object Libs {
     private const val verHilt = "2.38.1"
     private const val verHiltViewModel = "1.0.0-alpha01"
     private const val verAndroidJunit = "1.1.3"
-    private const val verGradlePlugin = "7.1.2"
-    private const val verKotlin = "1.6.21"
+    private const val verKotlin = ""
     private const val verSquareUpLogcat = "0.1"
     private const val verAppCompat = "1.4.1"
     private const val verMaterial = "1.5.0"
@@ -33,17 +32,10 @@ object Libs {
     private const val verJUnit = "4.12"
     private const val verEspresso = "3.4.0"
     private const val verAndroidxCoreKtx = "1.7.0"
-    private const val verMockk = "1.12.3"
+    private const val verMockk = "1.12.8"
     private const val verAndroidTest = "1.4.0"
     private const val verAndroidRunner = "1.4.0"
     private const val verAndroidRules = "1.4.0"
-
-    /**
-     * To define plugins
-     */
-    const val hiltGradle = "com.google.dagger:hilt-android-gradle-plugin:$verHilt"
-    const val androidGradle = "com.android.tools.build:gradle:$verGradlePlugin"
-    const val kotlinGradle = "org.jetbrains.kotlin:kotlin-gradle-plugin:$verKotlin"
 
     /**
      * To define dependencies
@@ -91,13 +83,15 @@ object Libs {
     const val appCompat = "androidx.appcompat:appcompat:$verAppCompat"
     const val activityKtx = "androidx.activity:activity-ktx:$verActivityKtx"
     const val fragmentKtx = "androidx.fragment:fragment-ktx:$verFragmentKtx"
-    const val squareupLogcat = "com.squareup.logcat:logcat:$verSquareUpLogcat"
+    const val squareUpLogcat = "com.squareup.logcat:logcat:$verSquareUpLogcat"
     const val kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$verKotlin"
     const val materialDesign = "com.google.android.material:material:$verMaterial"
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:$verConstraintLayout"
 
     const val navigationFragmentKtx = "androidx.navigation:navigation-fragment-ktx:$verNavigation"
     const val navigationUiKtx = "androidx.navigation:navigation-ui-ktx:$verNavigation"
+
+    const val activityCompose = "androidx.activity:activity-compose:${verActivityCompose}"
 
     // lifecycle
     const val lifecycleKtx = "androidx.lifecycle:lifecycle-runtime-ktx:$verLifecycle"
@@ -116,6 +110,10 @@ object Libs {
     const val moshiCodegen = "com.squareup.moshi:moshi-kotlin-codegen:$verMoshi"
     const val moshiAdapters = "com.squareup.moshi:moshi-adapters:$verMoshi"
 
+    const val viewModelCompose =
+        "androidx.lifecycle:lifecycle-viewmodel-compose:${verViewModelCompose}"
+    const val animationCompose = "androidx.compose.animation:animation:$verComposeUi"
+
     const val archCore = "androidx.arch.core:core-testing:$verArchCore"
     const val mockkCore = "io.mockk:mockk:$verMockk"
     const val mockkJvm = "io.mockk:mockk-agent-jvm:$verMockk"
@@ -125,3 +123,111 @@ object Libs {
     const val espresso = "androidx.test.espresso:espresso-core:$verEspresso"
     const val androidLegacy = "androidx.legacy:legacy-support-v4:$verAndroidLegacy"
 }
+
+val implementationLibs = listOf(
+
+    Libs.androidCoreKtx,
+    Libs.appCompat,
+    Libs.materialDesign,
+    Libs.constraintLayout,
+    Libs.activityKtx,
+    Libs.fragmentKtx,
+    Libs.navigationFragmentKtx,
+    Libs.navigationUiKtx,
+    Libs.androidLegacy,
+
+    Libs.kotlinCoroutinesCore,
+    Libs.kotlinCoroutinesAndroid,
+
+    Libs.lifecycleKtx,
+    Libs.lifecycleViewModelKtx,
+    Libs.lifecycleSaveState,
+    Libs.lifecycleLiveDataKtx,
+    Libs.lifecycleProcess,
+    Libs.lifecycleReactLiveStreamsKtx,
+
+    Libs.composeUi,
+    Libs.composeConstraintLayout,
+    // Tooling support (Previews, etc.,
+    Libs.composeUiTooling,
+    // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.,
+    Libs.composeFoundation,
+    // Integration with activities
+    Libs.activityCompose,
+    // Animations
+    Libs.animationCompose,
+    // Integration with ViewModels
+    Libs.viewModelCompose,
+    // Material Design
+    Libs.composeMaterialDesign,
+    // Material design icons
+    Libs.composeMaterialDesignIcon,
+    Libs.composeMaterialDesignIconExtended,
+    // Integration with observables
+    Libs.composeUiLiveData,
+    Libs.coliCompose,
+    Libs.hiltNavigationCompose,
+    Libs.composeConstraintLayout,
+    Libs.hiltAndroid,
+
+    Libs.hiltAndroid,
+
+    Libs.squareUpLogcat,
+    Libs.moshiKotlin,
+    Libs.moshiAdapters,
+)
+
+val testImplementationLibs = listOf(
+    Libs.junit,
+    Libs.mockkCore,
+    Libs.mockkJvm,
+    // koTest
+    Libs.koTestRunner,
+    Libs.koTestAssertions,
+    Libs.koTestProperty,
+    // junit 5
+    Libs.junit5Jupiter,
+)
+
+val androidTestImplementationLibs = listOf(
+    // Core library
+    Libs.androidTestCore,
+    Libs.androidTestCoreKtx,
+
+    // AndroidJUnitRunner and JUnit Rules
+    Libs.androidRunner,
+    Libs.androidRules,
+
+    // Assertions
+    Libs.androidJunit,
+    Libs.androidJunitKtx,
+    Libs.archCore,
+    Libs.kotlinCoroutinesTest,
+    Libs.mockkJvm,
+    Libs.mockkAndroid,
+    Libs.androidJunit,
+    Libs.espresso,
+
+    // compose UI Tests
+    Libs.composeUnitTest,
+    Libs.koTestRunner,
+    Libs.koTestAssertions,
+    Libs.koTestProperty,
+    Libs.androidJunit5Core,
+)
+
+val kaptLibs = listOf(
+    Libs.hiltAndroidCompiler
+)
+
+val kspLibs = listOf(
+    Libs.moshiCodegen
+)
+
+val testRuntimeOnly = listOf(
+    Libs.junit5Engine
+)
+
+val androidTestRuntimeOnly = listOf(
+    Libs.androidJunit5Runner
+)
