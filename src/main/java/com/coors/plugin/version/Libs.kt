@@ -6,9 +6,7 @@ object Libs {
     private const val verKotest = "5.3.0"
     private const val verHiltNavigationCompose = "1.0.0"
     private const val verColiCompose = "2.1.0"
-    private const val verViewModelCompose = "2.4.1"
     private const val verActivityCompose = "1.4.0"
-    const val verComposeUi: String = "1.1.1"
     private const val verArchCore = "2.1.0"
     private const val verAndroidLegacy = "1.0.0"
     private const val verNavigation = "2.4.1"
@@ -21,14 +19,12 @@ object Libs {
     private const val verKotlinCoroutines = "1.5.2"
     private const val verKotlinDateTime = "0.2.1"
     private const val verHilt = "2.38.1"
-    private const val verHiltViewModel = "1.0.0-alpha01"
     private const val verAndroidJunit = "1.1.3"
     private const val verKotlin = ""
     private const val verSquareUpLogcat = "0.1"
     private const val verAppCompat = "1.4.1"
     private const val verMaterial = "1.5.0"
     private const val verConstraintLayout = "1.1.3"
-    private const val verComposeConstraintLayout = "1.0.1"
     private const val verJUnit = "4.12"
     private const val verEspresso = "3.4.0"
     private const val verAndroidxCoreKtx = "1.7.0"
@@ -50,18 +46,16 @@ object Libs {
     const val hiltNavigationCompose =
         "androidx.hilt:hilt-navigation-compose:$verHiltNavigationCompose"
     const val coliCompose = "io.coil-kt:coil-compose:$verColiCompose"
-    const val composeUnitTest = "androidx.compose.ui:ui-test-junit4:$verComposeUi"
-    const val composeUiLiveData = "androidx.compose.runtime:runtime-livedata:$verComposeUi"
-    const val composeMaterialDesignIconExtended =
-        "androidx.compose.material:material-icons-extended:$verComposeUi"
-    const val composeMaterialDesignIcon =
-        "androidx.compose.material:material-icons-core:$verComposeUi"
-    const val composeMaterialDesign = "androidx.compose.material:material:$verComposeUi"
-    const val composeFoundation = "androidx.compose.foundation:foundation:$verComposeUi"
-    const val composeUiTooling = "androidx.compose.ui:ui-tooling:$verComposeUi"
-    const val composeUi = "androidx.compose.ui:ui:$verComposeUi"
-    const val composeConstraintLayout =
-        "androidx.constraintlayout:constraintlayout-compose:$verComposeConstraintLayout"
+
+    const val composeMaterial3 = "androidx.compose.material3:material3"
+    const val composeFoundation = "androidx.compose.foundation:foundation"
+    const val composeUi = "androidx.compose.ui:ui"
+    const val composePreview = "androidx.compose.ui:ui-tooling-preview"
+    const val composeTooling = "androidx.compose.ui:ui-tooling"
+    const val composeJunit4 = "androidx.compose.ui:ui-test-junit4"
+    const val composeManifest = "androidx.compose.ui:ui-test-manifest"
+    const val composeViewModel = "androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1"
+    const val composeActivity = "androidx.activity:activity-compose:1.5.1"
 
     const val androidTestCoreKtx = "androidx.test:core-ktx:$verAndroidTest"
     const val androidTestCore = "androidx.test:core:$verAndroidTest"
@@ -110,10 +104,6 @@ object Libs {
     const val moshiCodegen = "com.squareup.moshi:moshi-kotlin-codegen:$verMoshi"
     const val moshiAdapters = "com.squareup.moshi:moshi-adapters:$verMoshi"
 
-    const val viewModelCompose =
-        "androidx.lifecycle:lifecycle-viewmodel-compose:${verViewModelCompose}"
-    const val animationCompose = "androidx.compose.animation:animation:$verComposeUi"
-
     const val archCore = "androidx.arch.core:core-testing:$verArchCore"
     const val mockkCore = "io.mockk:mockk:$verMockk"
     const val mockkJvm = "io.mockk:mockk-agent-jvm:$verMockk"
@@ -147,27 +137,13 @@ val implementationLibs = listOf(
     Libs.lifecycleReactLiveStreamsKtx,
 
     Libs.composeUi,
-    Libs.composeConstraintLayout,
-    // Tooling support (Previews, etc.,
-    Libs.composeUiTooling,
     // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.,
     Libs.composeFoundation,
     // Integration with activities
     Libs.activityCompose,
-    // Animations
-    Libs.animationCompose,
-    // Integration with ViewModels
-    Libs.viewModelCompose,
-    // Material Design
-    Libs.composeMaterialDesign,
-    // Material design icons
-    Libs.composeMaterialDesignIcon,
-    Libs.composeMaterialDesignIconExtended,
     // Integration with observables
-    Libs.composeUiLiveData,
     Libs.coliCompose,
     Libs.hiltNavigationCompose,
-    Libs.composeConstraintLayout,
     Libs.hiltAndroid,
 
     Libs.hiltAndroid,
@@ -209,7 +185,7 @@ val androidTestImplementationLibs = listOf(
     Libs.espresso,
 
     // compose UI Tests
-    Libs.composeUnitTest,
+    Libs.composeJunit4,
     Libs.koTestRunner,
     Libs.koTestAssertions,
     Libs.koTestProperty,
